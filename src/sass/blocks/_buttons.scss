@@ -19,6 +19,12 @@
         font-size: 16px;
         line-height: 25px;
     }
+    &--size--s {
+        width: 135px;
+        height: 44px;
+        font-size: 14px;
+        line-height: 22px;
+    }
 }
 .header__button {
     margin-top: 4px;
@@ -28,5 +34,8 @@
     margin-top: 69px;
 }
 .form__button {
+    margin-top: 17px;
+}
+.catalog-item__button {
     margin-top: 17px;
 }
