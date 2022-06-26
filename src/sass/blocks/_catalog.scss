@@ -1,6 +1,5 @@
 .catalog {
-    padding-bottom: 103px;
-    min-height: 940px;
+    min-height: 1103px;
     &__tabs {
         width: 643px;
         display: flex;
@@ -45,6 +44,13 @@
             display: flex;
             margin-top: 57px;
             flex-wrap: wrap;
+        }
+    }
+    &__catalog-item {
+        margin-right: 15px;
+        margin-bottom: 19px;
+        &:nth-child(3n) {
+            margin-right: 0;
         }
     }
 }
