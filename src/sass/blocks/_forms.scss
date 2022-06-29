@@ -9,12 +9,18 @@
         background-color: #ffffff;
         font-size: 14px;
         font-weight: 500;
-        color: #4B4B4B;
+        border: 1px solid #4B4B4B; 
     }
     &__input:nth-child(n+2) {
         margin-top: 13px;
     }
 }
+
 .consultation__form {
     margin-top: 36px;
+}
+
+.modal__form {
+    margin: 0 auto;
+    margin-top: 26px;
 }

@@ -1,0 +1,43 @@
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 382px;
+    background: #F2F2F2;
+    &--size--lg {
+        min-height: 403px;
+        padding: 35px 25px 40px 25px;
+    }
+    &--size--s {
+        min-height: 143px;
+        padding: 35px 77px;
+    }
+    &__cross {
+        position: absolute;
+        top: 0;
+        right: -20px;
+        transform: translateX(+50%);
+        font-size: 25px;
+        line-height: 21px;
+        color: $main_color;
+    }
+    &__subtitle {
+        font-weight: 700;
+        font-size: 19px;
+        line-height: 19px;
+        text-align: center;
+        color: #0D0D0D;
+    }
+    &__descr {
+        margin-top: 10px;
+        font-weight: 700;
+        font-size: 14px;
+        text-align: center;
+        color: #0D0D0D;
+    }
+}
+
+#consultation, #order, #thanks {
+    display: none;
+} 
