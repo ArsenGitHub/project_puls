@@ -7,6 +7,8 @@ $(document).ready(function(){
         nextArrow: '<button type="button" class="slick-next"><img src="../icon/carousel_icons/right_arrow.png"></button>'
     });
 
+    // tabs
+
     $('ul.catalog__tabs').on('click', 'li:not(.catalog__tabs-item--active)', function() {
         $(this)
           .addClass('catalog__tabs-item--active').siblings().removeClass('catalog__tabs-item--active')
@@ -25,4 +27,19 @@ $(document).ready(function(){
 
     toggleSlide('.catalog-item__link-about');
     toggleSlide('.catalog-item__link-back');
+
+    // modal
+
+    $('[data-modal=consultation]').on('click', function() {
+        $('.overlay,#consultation').fadeIn('slow');
+    });
+
+    $('.modal__cross').on('click', function() {
+        $('.overlay,#consultation,#order, #thanks').fadeOut('slow');
+    });
+
+    
+    $('.catalog-item__button').on('click', function() {
+        $('.overlay,#order').fadeIn('slow');
+    });
  });
