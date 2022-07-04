@@ -38,8 +38,69 @@ $(document).ready(function(){
         $('.overlay,#consultation,#order, #thanks').fadeOut('slow');
     });
 
-    
-    $('.catalog-item__button').on('click', function() {
-        $('.overlay,#order').fadeIn('slow');
+    $('.catalog-item__button').each(function(i) {
+        $(this).on('click', function() {
+          $('#order .modal__descr').text($('.catalog-item__subtitle').eq(i).text()); 
+          $('.overlay,#order').fadeIn('slow');
+        });
+    }); 
+
+/*     $('.consultation__form').validate({
+        rules: {
+            name:  {
+                required: true,
+                minlength: 2
+              },
+            phone: "required",
+            email: {
+              required: true,
+              email: true
+            }
+        },
+        messages: {
+            name: {
+                required: "Введите свое имя",
+                minlength: jQuery.validator.format("Минимальное допустимое кол-во символов {0}!")
+              },
+            phone: "Введите свой номер телефона",
+            email: {
+              required: "Введите свой почтовый адрес",
+              email: "Неправильный формат почты"
+            }
+          }
     });
+    $('#consultation .modal__form').validate();
+    $('#order .modal__form').validate(); */
+    
+    function validateForms(form) {
+        $(form).validate({
+            rules: {
+                name:  {
+                    required: true,
+                    minlength: 2
+                  },
+                phone: "required",
+                email: {
+                  required: true,
+                  email: true
+                }
+            },
+            messages: {
+                name: {
+                    required: "Введите свое имя",
+                    minlength: jQuery.validator.format("Минимальное допустимое кол-во символов {0}!")
+                  },
+                phone: "Введите свой номер телефона",
+                email: {
+                  required: "Введите свой почтовый адрес",
+                  email: "Неправильный формат почты"
+                }
+              }
+        });
+    };
+
+    validateForms('.consultation__form');
+    validateForms('#consultation .modal__form');
+    validateForms('#order .modal__form');
+
  });
