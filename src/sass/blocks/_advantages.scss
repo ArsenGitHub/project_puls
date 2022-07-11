@@ -32,5 +32,14 @@
         text-transform: uppercase;
         color: #C70101;
     }
+    &_icon--animation--beat {
+        animation: beat  2s infinite linear;
+    }
+    &_icon--animation--move {
+        animation: steps 3s infinite ease;
+    }
+    &_icon--animation--shake {
+        animation: shake  5s infinite linear;
+    }
 }
     
