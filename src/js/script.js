@@ -80,22 +80,6 @@ $(document).ready(function(){
 
     // form submit
 
-/*     $('form').submit(function(e)  {
-      e.preventDefault();
-      $.ajax({
-        type: "POST",
-        url: "mailer/smart.php",
-        data: $(this).serialize()
-      }).done(function() {
-        $(this).find("input").val("");
-        $('#consultation, #order').fadeOut('slow');
-        $('.overlay, #thanks').fadeIn('slow');
-        
-        $('form').trigger('reset');
-      });
-      return false;
-    }); */
-
     $('form').submit(function(e) {
       e.preventDefault();
       $.ajax({
@@ -111,5 +95,21 @@ $(document).ready(function(){
       });
       return false;
   });
+
+  $(window).scroll(function() {
+    if($(this).scrollTop() >1600) {
+      $('.page-up').fadeIn('slow');
+    } else {
+      $('.page-up').fadeOut('slow');
+    }
+  });
+
+  $('a[href^="#"]').click(function(){ 
+    let anchor = $(this).attr('href');  
+    $('html, body').animate({           
+    scrollTop:  $(anchor).offset().top  
+    }, 600);                            
+    });
+    
 
  });
