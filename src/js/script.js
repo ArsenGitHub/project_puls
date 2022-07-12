@@ -96,6 +96,8 @@ $(document).ready(function(){
       return false;
   });
 
+  // Smooth Scroll-up
+
   $(window).scroll(function() {
     if($(this).scrollTop() >1600) {
       $('.page-up').fadeIn('slow');
@@ -111,5 +113,8 @@ $(document).ready(function(){
     }, 600);                            
     });
     
+    // Script WOW
+
+    new WOW().init();
 
  });
