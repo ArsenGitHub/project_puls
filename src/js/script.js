@@ -106,7 +106,7 @@ $(document).ready(function(){
     }
   });
 
-  $('a[href^="#"]').click(function(){ 
+  $('a[href=#selection]').click(function(){ 
     let anchor = $(this).attr('href');  
     $('html, body').animate({           
     scrollTop:  $(anchor).offset().top  
